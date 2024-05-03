@@ -2,9 +2,7 @@
 
 import React, { useState } from "react";
 
-import { GeneratorForm } from "@/components/GeneratorForm";
-import { LoadingIndicator } from "@/components/LoadingIndicator";
-import { ImageDisplay } from "@/components/ImageDisplay";
+import { GeneratorForm, LoadingIndicator, ImageDisplay } from "@/components";
 
 const Home: React.FC = () => {
   const [prompt, setPrompt] = useState<string>("");
