@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 
-import GeneratorForm from "@/components/GeneratorForm";
+import { GeneratorForm } from "@/components/GeneratorForm";
+import { LoadingIndicator } from "@/components/LoadingIndicator";
 
 const Home: React.FC = () => {
   const [prompt, setPrompt] = useState<string>("");
@@ -45,6 +46,8 @@ const Home: React.FC = () => {
             isLoading={isLoading}
             handleSubmit={handleSubmit}
           />
+
+          {isLoading && <LoadingIndicator />}
         </div>
       </div>
     </div>
