@@ -13,6 +13,28 @@ const Home: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
+
+    setIsLoading(true);
+
+    try {
+      const res = await fetch("/api/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        setImageUrl(data[0].url);
+      }
+    } catch (error) {
+      console.error("Error generating the image:", error);
+      alert("Failed to generate the image.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
