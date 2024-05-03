@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import { GeneratorForm } from "@/components/GeneratorForm";
 import { LoadingIndicator } from "@/components/LoadingIndicator";
+import { ImageDisplay } from "@/components/ImageDisplay";
 
 const Home: React.FC = () => {
   const [prompt, setPrompt] = useState<string>("");
@@ -48,6 +49,8 @@ const Home: React.FC = () => {
           />
 
           {isLoading && <LoadingIndicator />}
+
+          <ImageDisplay imageUrl={imageUrl} prompt={prompt} />
         </div>
       </div>
     </div>
