@@ -40,5 +40,3 @@ export const GeneratorForm: React.FC<Props> = ({
 };
 
 GeneratorForm.displayName = "GeneratorForm";
-
-export default GeneratorForm;
