@@ -38,7 +38,7 @@ const Home: React.FC = () => {
   return (
     <div className="app">
       <div className="text-center font-custom bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-center">
-        <div className="container mx-auto max-w-2xl p-8 bg-gray-50 rounded-lg shadow transition-shadow duration-300">
+        <div className="container mx-auto max-w-2xl p-8 bg-gray-50 transition-shadow duration-300">
           <h1 className="text-3xl font-bold">Image Generator</h1>
           <p className="mt-4 text-gray-600">
             <a
@@ -61,6 +61,8 @@ const Home: React.FC = () => {
             . It generates an image based on the description you provide.
           </p>
 
+          <br />
+
           <GeneratorForm
             prompt={prompt}
             setPrompt={setPrompt}
@@ -70,7 +72,7 @@ const Home: React.FC = () => {
 
           {isLoading && <LoadingIndicator />}
 
-          <ImageDisplay imageUrl={imageUrl} prompt={prompt} />
+          {imageUrl && <ImageDisplay imageUrl={imageUrl} prompt={prompt} />}
         </div>
       </div>
     </div>
