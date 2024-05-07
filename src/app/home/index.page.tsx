@@ -58,7 +58,10 @@ const Home: React.FC = () => {
             >
               OpenAI
             </a>
-            . It generates an image based on the description you provide.
+          </p>
+
+          <p className="mt-4 text-gray-600">
+            Generate an image based on the descriptions you provide.
           </p>
 
           <br />

@@ -1,4 +1,5 @@
 import React from "react";
+
 interface Props {
   imageUrl: string;
   prompt: string;
@@ -6,7 +7,7 @@ interface Props {
 
 export const ImageDisplay: React.FC<Props> = ({ imageUrl, prompt }) => {
   return (
-    <div className="relative image-container mt-5 text-center flex justify-center">
+    <div className="relative group image-container mt-5 text-center flex justify-center">
       <img
         src={imageUrl}
         alt="Generated from OpenAI"
