@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/", {
+      const res = await fetch("/api", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 
       if (res.ok) {
         const data = await res.json();
-        setImageUrl(data[0].url);
+        setImageUrl(data.image);
       }
     } catch (error) {
       console.error("Error generating the image:", error);

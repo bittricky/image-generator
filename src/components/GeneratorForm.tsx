@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {
   prompt: string;
-  setPrompt: () => void;
+  setPrompt: (arg: string) => void;
   handleSubmit: (e: any) => void;
   isLoading: boolean;
 }

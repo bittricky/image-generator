@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 interface Props {
   imageUrl: string;
@@ -9,7 +8,7 @@ interface Props {
 export const ImageDisplay: React.FC<Props> = ({ imageUrl, prompt }) => {
   return (
     <div className="image-container mt-5 text-center flex justify-center">
-      <Image
+      <img
         src={imageUrl}
         alt="Generated from OpenAI"
         className="generated-image max-w-full rounded-lg inline-block transition-transform duration-300 hover:scale-105"
